@@ -1,4 +1,4 @@
-const { name } = require("ejs");
+
 
 var currquestion=0;
 var orans;
