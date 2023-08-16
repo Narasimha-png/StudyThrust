@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "faker": "^6.6.6",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.3.4",
+    "nodemailer": "^6.9.3",
+    "wbm": "^1.1.16",
+    "wtm": "^1.0.8"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  },
+  "type": "module",
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
