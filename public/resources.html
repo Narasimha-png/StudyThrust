@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <div id="menubar">
+            <button onclick="showmenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="38" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+            </button>
+        </div>
+        <div>
+            <button id="cancel" onclick="cancelme()"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg></button>
+        </div>
+        
+        <div id="logo">
+             <h1>StudyTime</h1>
+            </div>
+        <div class="nav1">
+       <div class="flex-itemnav1"> 
+        <a  href="/">Home</a>
+       </div>
+       <div class="flex-itemnav2">
+        <a  style="color: blue; text-decoration: underline;" href="">Rosourses</a>  
+       </div>
+       <div class="flex-itemnav3">
+        <a href="/home">Consult a Teacher</a>
+        
+       </div>
+       <div class="flex-itemnav4">
+        <a href="">Contact Us</a>
+       </div>
+       
+    </div>
+    <div>
+        <button onclick="loginme()" id="loginbtn">Login</button>
+       </div>
+
+    </div>
+    <div class="flex-container1">
+        <div id="mobmenu">
+        <div class="mobmenu1">
+            <a href="/">Home</a>
+        </div>
+        <div class="mobmenu2">
+            <a style="color: blue; text-decoration: underline;" href="/resources">Rosourses</a>
+        </div>
+        <div class="mobmenu3">
+            <a href="#">Consult Teacher</a>
+        </div>
+        <div class="mobmenu4">
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+    <div id="main-login">
+        <div id="sub-login">
+            <div id="cancellogindiv">
+                <button id="cancelogin" onclick="cancelloginpage()" >
+                <svg id="cancelsvg" xmlns="http://www.w3.org/2000/svg" width="26" height="36" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </button>
+            </div>
+            <div id="loginimage">
+                <img id="loginphoto" src="study.jpg" alt="">
+            </div>
+            <div id="logindetails">
+                <input placeholder="Enter e-mail" type="text">
+                <input placeholder="Enter Password" type="password">
+                <button id="main-loginbtn"><a href="/profile">Login</a> </button>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+        <div class="main-resources">
+        <div class="fileheading11">
+            <div>
+            <button class="btn-file1" onclick="openfile1()">Youtube Video Explenation Links (Devloper Special)
+                <svg id="uparrow1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                  </svg>
+                  <svg id="downarrow1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                  </svg>
+            </button>
+        </div>
+    
+        <div id="file1" >
+            <object data="Quickrevision ShortCuts.pdf" type="application/pdf" >
+                <p>Unable to display PDF file. <a target="_blank" href="https://drive.google.com/file/d/17nSCk_HJbHbqoLlDsL7Z--4cSEtTLDYJ/view?pli=1">Download</a> instead.</p>
+              </object>
+        </div>
+        <div class="file-heading2">
+            <button class="btn-file2" onclick="openfile2()"><a href="https://successgyan.in/"> Notes and RoadMap </a>
+                <svg id="uparrow2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                  </svg>
+                  <svg id="downarrow2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                  </svg>
+            </button>
+        </div>
+        <div id="file2">
+            <object data="Quickrevision ShortCuts.pdf" type="application/pdf" >
+                <p>Unable to display PDF file. <a href="https://drive.google.com/file/d/17nSCk_HJbHbqoLlDsL7Z--4cSEtTLDYJ/view?pli=1">Download</a> instead.</p>
+              </object>
+        </div>
+        <div>
+            <button class="btn-file3" onclick="openfile3()"> <a href="https://education.sakshi.com/en/eamcet/bitbank">Chapter Wise Practice Questions</a>
+                <svg id="uparrow3" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                  </svg>
+                  <svg id="downarrow3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                  </svg>
+            </button>
+        </div>
+        <div id="file3" >
+            <object  data="Quickrevision ShortCuts.pdf" type="application/pdf" >
+                <p>Unable to display PDF file. <a href="https://drive.google.com/file/d/17nSCk_HJbHbqoLlDsL7Z--4cSEtTLDYJ/view?pli=1">Download</a> instead.</p>
+              </object>
+        </div>
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-family: "Work Sans", Sans-serif;
+    
+    
+}
+body{
+    letter-spacing: 0.7px;
+   
+}
+.btn-file1,.btn-file2,.btn-file3{
+    display: block;
+    margin: auto;
+    min-width: 100%;
+    background-color: transparent;
+    padding: 0.6rem;
+    border: none;
+    font-size: medium;
+    
+    padding: 30px;
+
+}
+#cancelsvg{
+    background-color: black;
+}
+
+object{
+    min-width: 100%;
+    height: 500px;
+    display: block;
+    margin: auto;
+}
+@keyframes buttonanimate{
+    0%{
+        height: 0px;
+    }
+   
+}
+.main-resources{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+   
+}
+#file1 , #file2 , #file3{
+    display: none;
+}
+#uparrow1,#uparrow2,#uparrow3{
+    width: 26px;
+    height: 16px;
+    animation-name: buttonanimate;
+    animation-duration: 1.0s;
+    animation-delay: 0.1s;
+    color: black;
+
+}
+#downarrow1,#downarrow2,#downarrow3{
+    display: none;
+}
+.btn-file1:hover,.btn-file2:hover,.btn-file3:hover{
+    #uparrow1,#uparrow2,#uparrow3{
+        animation-name: buttonanimate;
+        animation-duration: 0.4s;
+        animation-iteration-count: infinite;
+    }
+
+
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        div{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 10px ;
+        justify-content: flex-end;
+
+    }
+    button{
+        width: 20%;
+        min-height: 100%;
+        padding: 1rem;
+        border: none;
+        background-color: rgb(254, 246, 230);
+        border-radius: 5rem;
+        cursor: pointer;
+
+    }
+    h2,h1{
+        color:rgb(62, 62, 255);
+    }
+    h1{
+        flex-grow: 10;
+    }
+    #progress{
+        display: none;
+
+    }
+</style>
+</head>
+<body>
+    <button id="clickme" onclick="creatediv()">Click Here</button>
+    <button id="progress" onclick="viewprogress()">Progress Sheet</button>
+    <script src="./viewtests.js"></script>
+</body>
+</html>

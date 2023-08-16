@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    #container{
+        display: block;
+        margin: auto;
+        width: 100%;
+        overflow: scroll;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+</div>
+    <!-- Ensure you have included the Google Charts API script in your HTML -->
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script>
+  // Move the 'h' variable outside the totaltests function to make it global
+  var h = [];
+
+  // Define the totaltests function
+  async function totaltests() {
+    const urlparams = new URLSearchParams(window.location.search);
+    const mapencoded = urlparams.get("map");
+    const name = urlparams.get("name");
+   const map = JSON.parse(mapencoded);
+
+    var progressmap = new Map(Object.entries(map));
+
+    
+
+    // Populate 'h' array
+    for (const [key, value] of progressmap.entries()) {
+      h.push([key, value]);
+    }
+
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+  }
+
+  // Wait for the DOM to be fully loaded before executing totaltests
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(totaltests, 100); // Add a slight delay to allow the Google Charts library to load
+  });
+
+  // Define the drawChart function
+  function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Test');
+    data.addColumn('number', 'Marks');
+    data.addRows(h);
+
+    var options = {
+      title: 'Progress Sheet',
+      curveType: 'function',
+      legend: { position: 'bottom' },
+      vAxis: {
+        title: 'Marks',
+        ticks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160]
+      }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+    chart.draw(data, options);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    background: black;
+    box-sizing: border-box;
+    color: rgb(218, 213, 213);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2{
+    color: white;
+    background-color: transparent;
+    
+}
+#practiceimg{
+    min-width: 4rem;
+    height: 3rem;
+    background-size: cover;
+    background: black;
+    
+}
+#profiledetails{
+    display: none;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    justify-content: space-evenly;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 2px  rgb(193, 190, 190);
+}
+#navstream{
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap:2rem;
+    box-shadow: 0px 0px 10px 0px white;
+}
+#navstream select{
+    padding: 7px;
+}
+#navstream option{
+    color: white;
+}
+
+#testlinks , #bipctestlinks{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    
+}
+#bipctestlinks{
+    display: none;
+}
+button{
+    cursor: pointer;
+
+    border: 2px solid wheat;
+    padding:3rem;
+
+}
+#writtentests, #logoutprofile{
+    transform: skew(10deg,0deg);
+}
+
+button:hover{
+    background-color: gray;
+    transition: 0.6s ease-in-out;
+}
+#profile{
+    padding-right: 1rem;
+    cursor: pointer;
+
+}
+#test1 , #test2 , #test3{
+    box-shadow: inset 0px 0px 20px 0px ;
+    color: white;
+    font-weight: 1000;
+    letter-spacing: 1.2px;
+}
+#heading{
+    flex-grow: 5;
+    padding-left: 2rem;
+}
+#notification{
+    padding-right: 2.5rem;
+    flex-shrink: 4;
+}
+#profile:hover{
+    #profiledetails{
+        display: block;
+    }
+}
+.profiletabsmain{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-end;
+    position: absolute;
+    top: 5rem;
+    right: 0px;
+    
+    padding: 2.5rem;
+    display: none;
+}
+.profiletabs{
+    color: white;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin-top: 30px;
+    border: none;
+    background-color: rgb(57, 10, 225);
+    cursor: pointer;
+    
+}
+#logoutprofile{
+    background-color: rgb(244, 68, 68);
+    
+    margin-left: 30px;   
+   
+}
+#profileid{
+    padding: 10px;
+
+    color: white;
+}
+#profilebtn{
+    padding: 10px;
+    border: none;
+}
+#profileid{
+    justify-self: center;
+    align-self: center;
+}
+@keyframes rock {
+    0%{
+        transform: scale(0);
+        filter: blur(2px);
+   
+    }
+   
+}

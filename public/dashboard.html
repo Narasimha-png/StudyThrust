@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    
+
+   
+
+    <style>
+        *{
+            font-family: 'Montserrat', sans-serif;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-evenly;
+        }
+        #congo{
+            background-color: rgba(245, 139, 145, 0.8);
+            text-align: center;
+
+        }
+        #viewkey{
+            padding: 10px;
+            color: black;
+            font-weight: bolder;
+            letter-spacing: 1.5px;
+            background-color: #7FFF00;
+            border: none;
+         
+            width: 100%;
+            cursor: pointer;
+
+        }
+        #chart_div{
+            display: block;
+            margin: auto;
+            padding: 20px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="congo">
+            <h1>Yeah!!! It's Done</h1>
+        </div>
+       
+    <div id="score"></div>
+    <div id="incorrect"></div>
+    <div id="unanswered"></div>
+    <div id="time"></div>
+    <div id="chart_div"></div>
+    <button onclick="openkey()" id="viewkey">View Key</button>
+</div>
+</body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    var score;
+   google.charts.load('current', {'packages':['gauge']});
+   google.charts.setOnLoadCallback(drawChart);
+
+   function drawChart() {
+
+     var data = google.visualization.arrayToDataTable([
+       ['Label', 'Value'],
+       ['Score', parseInt(score)]
+     ]);
+
+     var options = {
+       width: 200, height: 200,
+       redFrom: 0, redTo: 40,
+       yellowFrom:40, yellowTo: 65,
+       greenFrom:65, greenTo:160,
+       min:0 , max:160,
+       minorTicks: 5
+     };
+
+     var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+     chart.draw(data, options);
+
+    
+    
+   }
+    function load(){
+    const queryParams = new URLSearchParams(window.location.search);
+    
+     score = queryParams.get("score");
+    const incorrect = queryParams.get("incorrect");
+    const unanswered = queryParams.get("unanswered");
+    const time = queryParams.get("time");
+    document.getElementById("score").innerHTML=`<h1> Score : ${score}</h1>`;
+    document.getElementById("incorrect").innerHTML =`<h1> Incorrect : ${incorrect} </h1>`;
+    document.getElementById("unanswered").innerHTML = `<h1> Unanswered : ${unanswered} </h1>`;
+    document.getElementById("time").innerHTML = `<h1> Total Time Taken : ${time} </h1>`;
+  drawChart();
+
+
+
+
+
+    }
+    function openkey(){
+        const currentURL = new URL(window.location.href);
+       const newURL = currentURL.pathname + '/results' + currentURL.search;
+
+      // Redirect to the new URL
+         window.location.href = newURL;
+
+    }
+    setTimeout(load);
+
+
+
+    
+
+</script>
+</html>

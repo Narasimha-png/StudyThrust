@@ -1,0 +1,232 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    box-sizing: border-box;
+    color: black;
+}
+#questionbtns{
+    margin-top: 0px;
+    height: 60vh;
+    overflow: scroll;
+}
+#navbarque{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 1.2%;
+    position: sticky;
+   z-index: 99;
+    width: 100%;
+    top:0px;
+   
+    
+
+
+}
+#clk,#time{
+    align-self: center;
+    justify-self: center;
+    padding-right: 1rem;
+}
+#menubutton{
+    flex-grow: 10;
+    flex-shrink: 10;
+    justify-self: start;
+    
+}
+
+#analysiss{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem ;
+    
+}
+#analysiss div{
+    display: flex;
+    flex-direction: column;
+    
+    padding: 5px;
+    box-shadow: 0px 0px 3px 3px gray ;
+}
+#indication1 , #indication2 , #indication3 , #indication4 {
+    align-self: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+}
+#indication2{
+    background-color: red;
+}
+#indication3{
+    background-color: blue;
+}
+#indication4{
+    background-color: #e5e5e5;
+}
+.btns{
+    padding-left: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    min-height: 2.4rem;
+    display: none;
+}
+.btns1{
+    
+    padding: 0.4rem;
+    
+    background-color: rgb(74, 253, 38);
+    color: rgb(71, 70, 70);
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    min-width: 8rem;
+    min-height: 2.4rem;
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+}
+li{
+   
+   margin:10px;
+    padding: 2%;
+}
+
+#questionimg{
+    width: 100%;
+}
+
+#imagesrc{
+    max-width: 95%;
+    height: 100%;
+}
+#outerdiv{
+    margin-top: 2%;
+    display: flex;
+    gap: 4%;
+}
+#maindiv{
+    min-width: 50%;
+}
+ #que{
+    margin-left: 20px;
+}
+
+#questionbuttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    gap:1rem;
+}
+#maths,#chemistry,#physics{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+button{
+    border-radius: 50%;
+    padding: 0.6rem;
+    background-color: #e5e5e5;
+    border: none;
+    cursor: pointer;
+}
+
+#qno{
+    align-self: center;
+}
+
+#que{
+    display: block;
+    
+}
+label{
+    width: 100%;
+}
+li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+
+}
+
+#opt{
+    height: 3rem;
+    
+}
+#foot{
+    margin-bottom: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:4%;
+}
+#prevbtn{
+    padding: 12%;
+    border: none;
+    cursor: pointer;
+}
+#savebtn{
+    padding: 6%;
+    border-radius: 0%;
+    border: none;
+    background-color: rgb(31, 31, 253);
+    color: white;
+    cursor: pointer;
+}
+#review{
+    display: flex;
+    justify-content: flex-end;
+}
+@media (max-width:769px) {
+    #questionimg{
+        width: 90vw;
+    }
+    #imagesrc{
+        width:100% ;
+        height:auto;
+    }
+    #outerdiv{
+        display: block;
+        position: relative;
+        top:40px;
+    }
+    #questionbuttons{
+        display: none;
+       
+    }
+   li:hover{
+    background-color:rgb(204, 203, 203);
+
+   }
+    .btns{
+        display: flex;
+    }
+    #questionbuttons{
+        background-color: white;
+        position: absolute;
+        top:0px;
+        display: block;
+        display: none;
+    }
+    button{
+        border-radius: 50%;
+        padding: 0.6rem;
+        background-color: #e5e5e5;
+        border: none;
+        
+    } 
+     
+}
+#time{
+    display: flex;
+    font-weight: 700;
+}

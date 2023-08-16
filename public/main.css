@@ -1,0 +1,403 @@
+html{
+    scroll-behavior: smooth ;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Work Sans", Sans-serif;
+    color: white;
+    box-sizing: border-box;
+    
+    
+}
+body{
+    letter-spacing: 0.7px;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url("head-back.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+   
+   
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(30, 30, 30, 0.85);
+    min-height: 5.5rem;
+    position: sticky; 
+    top:0px;
+    
+    border: 1px solid rgba(30, 30, 30, 0.85);  
+}
+.container{
+    z-index: 10;
+}
+
+#loginbtn{
+     width:70px;
+     height: 40px;
+     background-color: blue;
+     color: white;
+     border-radius: 30px;
+     border: none;
+
+
+}
+#logo{
+    flex-grow: 1;
+    margin-left: 50px;
+    
+    
+}
+.flex-itemnav1,.flex-itemnav2,.flex-itemnav3,.flex-itemnav4{
+    margin-right: 60px;
+}
+#menubar button{
+    display: absolute;
+    top:0%;
+    left:20%;
+    background-color: transparent;
+    border: none;
+    align-self: flex-start;
+    cursor: pointer;
+
+}
+#cancel{
+    background-color: transparent;
+    margin-left: 20px;
+    border: none;
+    display: none;
+}
+
+.nav1{
+    display: flex;
+}
+
+div>a{
+    text-decoration: none;
+    display: inline;
+    color: white;
+    padding: 10px;
+}
+.flex-itemnav1 a:hover, .flex-itemnav2 a:hover, .flex-itemnav3 a:hover, .flex-itemnav4 a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+#logindetails input{
+    padding: 1.2rem;
+}
+@media (max-width:913px) {
+    .nav1{
+        display: none;
+    }
+    #logo{
+        flex-shrink: -5;
+        margin: 0px;
+    }
+    #tests{
+        display: block;
+    
+    }
+    .sub-footer{
+        display: flex;
+        flex-direction: column;
+       align-self: center;
+    }
+    .myimage{
+        align-self: center;
+    }
+   
+
+    
+    
+}
+@media (min-width:913px) {
+    #menubar button{
+        display: none;
+    }
+    #mobmenu{
+        position: absolute;
+        z-index: 200;
+        display: none;
+    }
+    
+    
+}
+.flex-container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+#intro{
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+   width: 100%;
+   height: 88vh;
+
+}
+#mainlogo{
+    border-radius: 50%;
+    width: 200px;
+    align-self: center;
+    position: absolute;
+    top:20%;
+}
+#content{
+    color: linear-gradient(
+            to right, #f32170, #ff6b08,
+             #cf23cf, #eedd44);
+}
+#smile{
+    
+    padding: 10px;
+    
+}
+
+.mpcstream,.bipcstream{
+   background-color: white;
+    color: black;
+    height: 80vh;
+    width: 100vw;
+    margin-top: 2%;
+
+    box-shadow: 0px 0px 1px 1px white;
+    
+    
+    
+}
+button{
+    cursor: pointer;
+}
+#testemail, #conformemail{
+    background-color: black;
+    border: none;
+    
+}
+.mobmenu1,.mobmenu2 , .mobmenu3,.mobmenu4{
+    margin-top: 20px;
+}
+.mobmenu1 a:hover,.mobmenu2 a:hover , .mobmenu3 a:hover,.mobmenu4 a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+#mobmenu{
+    background-color:  rgba(30, 30, 30, 0.85);
+    height: auto;
+    width: 100%;
+    text-align: center;
+    display: none;
+    position: sticky;
+    z-index: 50;
+    top: 5.5rem;
+    animation-name: rock;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+
+}
+
+#menubar:hover ,#cancel:hover{
+    transition: 1s ease-in-out;
+    transform: rotate(360deg);
+
+}
+.mpcstream , .bipcstream{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+     
+}
+#mpcwrite ,#bipcwrite{
+    padding: 15px;
+    min-width: 50%;
+    display: block;
+    margin: auto;
+    background-color: rgb(72, 72, 243);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    border: none;
+    border-radius: 25px;
+    
+}
+.stream{
+    flex-wrap: wrap; 
+    font-size: larger;
+   font-family: 'Courier New', Courier, monospace;
+
+}
+.stream h1{
+    color: rgb(14, 11, 11);
+    background: linear-gradient(#6691ee, #eb2f2f);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+div h4{
+    padding: 8%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+    line-height: 2;
+    
+    align-content: center;
+    color: rgb(94, 89, 89);
+}
+@keyframes buttonanimate{
+    0%{
+        height: 0px;
+    }
+   
+}
+@keyframes rock {
+    0%{
+        transform: scale(0);
+        filter: blur(2px);
+    }
+    25%{
+        transform: scale(0.3);
+        filter : blur(0.3);
+    }
+    50%{
+        transform: scale(0.5);
+        filter : blur(1px);
+    }
+    75%{
+        transform: scale(0.7);
+        filter : blur(0.7);
+    }
+   100%{
+    transform: scale(1);
+    filter: blur(0px);
+   }
+   
+}
+#main-login{
+    animation-name: rock;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+
+}
+
+.main-footer{
+    display: block;
+    background-color: black;
+    color: white;
+    margin-top: 2rem;
+    width: 100vw;
+}
+.sub-footer{
+    display: flex;
+    
+}
+#pdffile{
+    width: 100%;
+    height: 100%;
+}
+.social-media{
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.social-media div{
+    padding: 1.2rem;
+    
+}
+.social-media svg{
+    padding: 0.2rem;
+}
+#mypic{
+
+
+    width:200px;
+    
+}
+.myimage{
+    padding: 5%;
+}
+#loginphoto{
+    width: 10rem;
+    height: 10rem;
+}
+#sub-login{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+#loginimage, #logindetails{
+    margin: 2rem;
+
+    
+}
+
+#logindetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+#logindetails input{
+    height: 2rem;
+    text-align: center;
+    margin-top: 10%;
+
+}
+#cancellogindiv{
+    align-self: self-start;
+}
+
+#main-loginbtn{
+    width:70px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    margin-right: 10px;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    margin-top: 30%;
+}
+#main-loginbtn:hover{
+    background-color: red;
+    .container{
+        filter: blur(80px);
+    }
+
+}
+#main-login{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:  rgba(30, 30, 30, 0.85);
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 99;
+    top:5.3rem;
+    display: none;
+    
+    
+}
+#cancelogin{
+    background-color:  rgba(30, 30, 30, 0.85);
+    border: none;
+}
+
+
+.mywords{
+    
+    padding: 4%;
+}
